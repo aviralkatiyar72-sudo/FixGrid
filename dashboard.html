@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixGrid - Company Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Fix<span>Grid</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bounties.html">Paid Bounties</a></li>
+      <li><a href="dashboard.html" class="active">Company Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Company Resolution Hub</h2>
+    <p>Review submitted advice, approve bounty releases, and manage public resolution statuses.</p>
+
+    <div class="table-container">
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+            <th>Adviser</th>
+            <th>Type</th>
+            <th>Summary</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="reportsTableBody">
+          <tr>
+            <td>John Doe</td>
+            <td><span class="badge free">Free Advice</span></td>
+            <td>Checkout button unaligned on mobile view.</td>
+            <td><span class="status pending">Under Review</span></td>
+            <td><button class="action-btn fix" onclick="markFixed(this)">Mark Fixed</button></td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td><span class="badge paid">Bounty ($250)</span></td>
+            <td>Payment gateway failure on Android 14.</td>
+            <td><span class="status fixed">Fixed</span></td>
+            <td><button class="action-btn pay" disabled>Reward Paid</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
